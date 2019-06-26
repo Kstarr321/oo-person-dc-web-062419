@@ -40,8 +40,7 @@ end
         elsif hygiene > 10 
             @hygiene = 10 
         end
-
-
+       @hygiene
 
     end 
     def happiness
@@ -73,8 +72,20 @@ end
     end
 
     def take_bath
+        # @hygiene += 4
+       hygiene_num = hygiene=(@hygiene)
+       if hygiene_num + 4 <= 10
         @hygiene += 4
-        "♪ Rub-a-dub just relaxing in the tub ♫"
+       else
+        @hygiene = 10
+       end
+    "♪ Rub-a-dub just relaxing in the tub ♫"
+    # if @hygiene <= 10
+    #     
+    # else 
+    #         @hygiene = 10
+    # end
+
      end
 
 
@@ -82,6 +93,7 @@ end
 end 
 
 rob = Person.new("Robert") 
-puts rob.happiness
-
+puts rob.take_bath
+puts rob.hygiene = 13
+puts rob.hygiene
 
