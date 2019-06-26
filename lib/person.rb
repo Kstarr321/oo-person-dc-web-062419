@@ -85,11 +85,14 @@ end
         '♪ another one bites the dust ♫'
     end
 
-    def call_friend(person)
+    def call_friend(friend)
         # binding.pry
-        person.happiness = person.happiness + 3
-        # binding.pry
+        self.happiness = self.happiness + 3
+        friend.happiness = friend.happiness + 3
+        "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
+
+
 
 
 end 
