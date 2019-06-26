@@ -30,17 +30,17 @@ end
         end
 
     end 
-    def hygiene=(hygiene)
-        if hygiene >= 0 && hygiene <= 10 
+    def hygiene=(hygien)
+
+        if hygien >= 0 && hygien <= 10 
         
-            @hygiene = hygiene
+            @hygiene = hygien
             
-        elsif hygiene < 0
+        elsif hygien < 0
             @hygiene = 0
-        elsif hygiene > 10 
+        else hygien > 10 
             @hygiene = 10 
         end
-       @hygiene
 
     end 
     def happiness
@@ -72,28 +72,30 @@ end
     end
 
     def take_bath
-        # @hygiene += 4
-       hygiene_num = hygiene=(@hygiene)
-       if hygiene_num + 4 <= 10
-        @hygiene += 4
-       else
-        @hygiene = 10
-       end
+    
+       self.hygiene = self.hygiene + 4
+
     "♪ Rub-a-dub just relaxing in the tub ♫"
-    # if @hygiene <= 10
-    #     
-    # else 
-    #         @hygiene = 10
-    # end
 
      end
 
+    def work_out
+        self.hygiene = self.hygiene - 3
+        self.happiness = self.happiness + 2
+        '♪ another one bites the dust ♫'
+    end
+
+    def call_friend(person)
+        # binding.pry
+        person.happiness = person.happiness + 3
+        # binding.pry
+    end
 
 
 end 
 
-rob = Person.new("Robert") 
-puts rob.take_bath
-puts rob.hygiene = 13
-puts rob.hygiene
+# rob = Person.new("Robert") 
+# puts rob.take_bath
+# puts rob.hygiene = 13
+# puts rob.hygiene
 
