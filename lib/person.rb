@@ -91,7 +91,27 @@ end
         friend.happiness = friend.happiness + 3
         "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
+def start_conversation(person, topic)
+    #binding.pry
+    x= 2
+    if topic == "politics"
+        
+        #binding.pry
+        self.happiness = self.happiness - 2
+        person.happiness = person.happiness - 2
+        "blah blah partisan blah lobbyist"
+    elsif topic == "weather"
+        self.happiness = self.happiness + 1 
+        person.happiness = person.happiness + 1
+        "blah blah sun blah rain"
+    elsif topic == "programming"
 
+        "blah blah blah blah blah"
+    end 
+
+
+
+end 
 
 
 
